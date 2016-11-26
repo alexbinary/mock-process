@@ -1,0 +1,17 @@
+{
+  "name": "mock-process",
+  "description": "Simple mock tools for node global process object",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "author": "Alexandre Bintz <alexandre.bintz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "istanbul cover _mocha",
+    "test:w": "mocha -w"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
