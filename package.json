@@ -1,6 +1,6 @@
 {
   "name": "mock-process",
-  "description": "Simple mock tools for node global process object",
+  "description": "Simple mock tools for node global process object 👻",
   "version": "0.1.0",
   "main": "src/index.js",
   "author": "Alexandre Bintz <alexandre.bintz@gmail.com>",
