@@ -11,42 +11,52 @@ describe('mock-process', function () {
     mockProcess.restore()
   })
   describe('#mock(name, value)', function () {
-    it('replace property of given name with given value', function () {
+    it('set value to property', function () {
       // ## TEST
-      mockProcess.mock('platform', 'mockOS')
+      mockProcess.mock('platform', 'foo')
       // ## Assert
-      expect(process.platform).to.equal('mockOS')
+      expect(process.platform).to.equal('foo')
       // ## End
     })
   })
   describe('#mock(properties)', function () {
-    it('replace several properties described in an object', function () {
+    it('set value to properties', function () {
       // ## TEST
-      mockProcess.mock({platform: 'mockOS'})
+      mockProcess.mock({
+        platform: 'foo',
+        release: 'bar'
+      })
       // ## Assert
-      expect(process.platform).to.equal('mockOS')
+      expect(process.platform).to.equal('foo')
+      expect(process.release).to.equal('bar')
       // ## End
     })
   })
   describe('#restore(name)', function () {
-    it('restore original property of given name', function () {
+    it('restore property', function () {
       // ## Setup
       let originalPlatform = process.platform
-      mockProcess.mock('platform', 'mockOS')
+      mockProcess.mock({
+        platform: 'foo',
+        release: 'bar'
+      })
       // ## TEST
       mockProcess.restore('platform')
       // ## Assert
       expect(process.platform).to.equal(originalPlatform)
+      expect(process.release).to.equal('bar')
       // ## End
     })
   })
   describe('#restore(names)', function () {
-    it('restore listed properties', function () {
+    it('restore properties', function () {
       // ## Setup
       let originalPlatform = process.platform
       let originalRelease = process.release
-      mockProcess.mock('platform', 'mockOS')
-      mockProcess.mock('release', 'mockRelease')
+      mockProcess.mock({
+        platform: 'foo',
+        release: 'bar'
+      })
       // ## TEST
       mockProcess.restore(['platform', 'release'])
       // ## Assert
@@ -56,12 +66,14 @@ describe('mock-process', function () {
     })
   })
   describe('#restore()', function () {
-    it('restore all mocked properties', function () {
+    it('restore all properties', function () {
       // ## Setup
       let originalPlatform = process.platform
       let originalRelease = process.release
-      mockProcess.mock('platform', 'mockOS')
-      mockProcess.mock('release', 'mockRelease')
+      mockProcess.mock({
+        platform: 'foo',
+        release: 'bar'
+      })
       // ## TEST
       mockProcess.restore()
       // ## Assert
