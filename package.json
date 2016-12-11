@@ -3,7 +3,8 @@
   "description": "Simple mock tools for node global process object 👻",
   "version": "0.1.0",
   "main": "src/index.js",
-  "author": "Alexandre Bintz <alexandre.bintz@gmail.com>",
+  "repository": "https://github.com/alexbinary/mock-process.git",
+  "author": "Alexandre Bintz <alexandre@bintz.io>",
   "license": "MIT",
   "scripts": {
     "test": "istanbul cover _mocha",
