@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "istanbul cover _mocha",
-    "test:w": "mocha -w"
+    "testw": "mocha -w"
   },
   "devDependencies": {
     "chai": "^3.5.0",
