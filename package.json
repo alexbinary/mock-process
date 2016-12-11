@@ -1,5 +1,5 @@
 {
-  "name": "mock-process",
+  "name": "alexbinary.mock-process",
   "description": "Simple mock tools for node global process object 👻",
   "version": "0.1.0",
   "main": "src/index.js",
