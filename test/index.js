@@ -3,7 +3,7 @@ let expect = require('chai').expect
 
 let mockProcess = require('../src/index')
 
-describe('mock process', function () {
+describe('mock-process', function () {
   beforeEach(function () {
     mockProcess.restore()
   })
